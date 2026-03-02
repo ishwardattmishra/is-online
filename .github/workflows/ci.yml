@@ -19,10 +19,30 @@ jobs:
           dotnet-version: "8.0.x"
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore IsOnline.sln
 
       - name: Build
-        run: dotnet build --no-restore -c Release
+        run: dotnet build IsOnline.sln --no-restore -c Release
 
       - name: Test
-        run: dotnet test --no-build -c Release --verbosity normal --logger runlet
+        run: dotnet test IsOnline.sln --no-build -c Release
+
+  publish-nuget:
+    needs: build-and-test
+    # Only run publish on push to main (e.g. PR merge), not on PRs
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Build and Pack
+        run: dotnet pack src/IsOnline/IsOnline.csproj -c Release -o ./nupkg
+
+      - name: Push to NuGet
+        run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
