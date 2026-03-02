@@ -16,8 +16,8 @@
     <PackageTags>network;online;offline;connectivity;internet;is-online;captive-portal;ncsi</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/sindresorhus/is-online</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/sindresorhus/is-online</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ishwardattmishra/is-online</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ishwardattmishra/is-online</PackageProjectUrl>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
