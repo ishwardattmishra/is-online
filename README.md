@@ -1,7 +1,5 @@
 # IsOnline.NET
 
-> Check if the internet connection is up — a C#/.NET port of [sindresorhus/is-online](https://github.com/sindresorhus/is-online).
-
 [![NuGet](https://img.shields.io/nuget/v/IsOnline.NET.svg)](https://www.nuget.org/packages/IsOnline.NET)
 
 ## Why?
@@ -206,4 +204,4 @@ HttpClient.DefaultProxy = new WebProxy("http://proxy.example.com:8080");
 
 ## License
 
-MIT — Original package by [Sindre Sorhus](https://sindresorhus.com). C# port by Ishwardatt Mishra.
+MIT — Created by Ishwar Datt Mishra.

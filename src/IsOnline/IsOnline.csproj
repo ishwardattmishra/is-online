@@ -10,9 +10,9 @@
 
     <!-- NuGet package metadata -->
     <PackageId>IsOnline.NET</PackageId>
-    <Version>1.0.0</Version>
-    <Authors>Ishwardatt Mishra; Original by Sindre Sorhus</Authors>
-    <Description>Check if the internet connection is up. A C#/.NET port of sindresorhus/is-online. Runs Apple, Google, and Microsoft captive-portal checks in parallel.</Description>
+    <Version>1.0.1</Version>
+    <Authors>Ishwar Datt Mishra</Authors>
+    <Description>Check if the internet connection is up. Runs Apple, Google, and Microsoft captive-portal checks in parallel.</Description>
     <PackageTags>network;online;offline;connectivity;internet;is-online;captive-portal;ncsi</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
