@@ -75,10 +75,10 @@ public class ConnectivityEventsTests
         var ex = new Exception("test");
         var args = new ConnectivityCheckFailedEventArgs
         {
-            Timestamp    = DateTimeOffset.UtcNow,
-            Url          = "https://example.com",
+            Timestamp = DateTimeOffset.UtcNow,
+            Url = "https://example.com",
             ErrorMessage = "test",
-            Exception    = ex,
+            Exception = ex,
         };
 
         Assert.Equal("https://example.com", args.Url);

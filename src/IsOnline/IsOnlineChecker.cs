@@ -126,10 +126,10 @@ public static class IsOnlineChecker
         {
             CheckFailed?.Invoke(null, new ConnectivityCheckFailedEventArgs
             {
-                Timestamp    = DateTimeOffset.UtcNow,
-                Url          = url,
+                Timestamp = DateTimeOffset.UtcNow,
+                Url = url,
                 ErrorMessage = ex.Message,
-                Exception    = ex,
+                Exception = ex,
             });
         }
         catch

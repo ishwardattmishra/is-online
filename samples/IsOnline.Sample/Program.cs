@@ -84,10 +84,10 @@ await RunDemo("All Options Combined",
         using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(15));
         return await IsOnlineChecker.CheckAsync(new IsOnlineOptions
         {
-            Timeout           = 8_000,
-            IpVersion         = 4,
+            Timeout = 8_000,
+            IpVersion = 4,
             CancellationToken = cts.Token,
-            FallbackUrls      = new[] { "https://example.com" },
+            FallbackUrls = new[] { "https://example.com" },
         });
     });
 
@@ -134,7 +134,7 @@ for (int i = 1; i <= 5; i++)
 {
     var online = await IsOnlineChecker.CheckAsync(new IsOnlineOptions { Timeout = 3000 });
     var symbol = online ? "●" : "○";
-    var color  = online ? ConsoleColor.Green : ConsoleColor.Red;
+    var color = online ? ConsoleColor.Green : ConsoleColor.Red;
     var status = online ? "ONLINE" : "OFFLINE";
 
     Console.ForegroundColor = color;
